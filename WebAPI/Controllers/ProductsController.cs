@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
@@ -29,7 +30,9 @@ namespace WebAPI.Controllers
         public IActionResult GetAll()
         {
             //Swagger
-            //Dependency chain --            
+            //Dependency chain --  
+
+            Thread.Sleep(5000);//sistemi 5 saniye geciktirmek için - angular'da
             var result = _productService.GetAll();
             if (result.Success)
             {
