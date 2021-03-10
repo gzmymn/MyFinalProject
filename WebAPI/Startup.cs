@@ -77,7 +77,7 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader()); //web sayfamýzdan gelen isteklere ben güveniyorum diyoruz
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyOrigin()); //web sayfamýzdan gelen isteklere ben güveniyorum diyoruz - Angular için ayzýldý
 
             app.UseHttpsRedirection();
 
