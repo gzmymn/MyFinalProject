@@ -76,6 +76,7 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.ConfigureCustomExceptionMiddleware();
 
             app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyOrigin()); //web sayfamýzdan gelen isteklere ben güveniyorum diyoruz - Angular için ayzýldý
 
